@@ -1,0 +1,37 @@
+{
+  "original_clone_remote": "https://github.com/samuell/xara-xtreme.git",
+  "original_remote_tracking_commit": "41e2f2eb7a869b34bdbe3c0fa3e2577b59f66860",
+  "libraries": [
+    {
+      "path": "libs/x86_64/libCDraw.a",
+      "sha256": "bc18d20492e04f9e3f01a2e4eadabb0099caacb7ab625703bfcd9c0c881da876",
+      "introducing_commit_for_current_bytes": "8742d2c7159e8c599bdae626d48d0b071324e6cb",
+      "git_blob": "59ec06e665fbe0ed4661dad37cc741de86f4c2fe",
+      "matches_original_clone": true,
+      "matches_historical_commit": true
+    },
+    {
+      "path": "libs/x86/libCDraw.a",
+      "sha256": "22a2ee648f1655ee006067cd1e5d3d474f7b43d664b3be98f366ef3063d004ae",
+      "introducing_commit_for_current_bytes": "f8e32c73afabbb7ebcc2e6c8a3b859ec76cd5f42",
+      "git_blob": "748bbf9fd11d7864030faf8c96df285230911ae5",
+      "matches_original_clone": true,
+      "matches_historical_commit": true
+    }
+  ],
+  "license_sha256": "ec434c1b5c97ffdf2780548362d0ae4e67cd254f4e949c443cd8c69a300110f0",
+  "license_introduced_commit": "4d17fd4c3c8fa66d2e847a9d92f35d5876dacfc8",
+  "license_identical_at_x86_64_archive_commit": true,
+  "other_bundled_archives": [
+    {
+      "path": "libs/darwin/libCDraw.a",
+      "sha256": "f73c7184eab4134fe002dc761ec49b71455c49fc03c952884d22a8df4b0876af",
+      "matches_original_clone_origin_master": true
+    },
+    {
+      "path": "libs/ppc/libCDraw.a",
+      "sha256": "8fa6de0c5a6adea3aaddd777d06a5b8f53146f5180dea572c1fb19b023e5f252",
+      "matches_original_clone_origin_master": true
+    }
+  ]
+}

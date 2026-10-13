@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "xara-vengeance": {
+      "command": "/absolute/path/to/vengeance/build/mcp-venv/bin/python",
+      "args": [
+        "/absolute/path/to/vengeance/automation/mcp/server.py",
+        "--binary",
+        "/absolute/path/to/vengeance/build/automation-v02/XaraLX"
+      ],
+      "env": {
+        "DISPLAY": ":0.0",
+        "XAUTHORITY": "/absolute/path/to/.Xauthority",
+        "XDG_SESSION_TYPE": "x11"
+      }
+    }
+  }
+}

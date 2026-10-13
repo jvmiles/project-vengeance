@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Xara Automation API 0.2 startup batch",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "requests"
+  ],
+  "properties": {
+    "transaction": {
+      "type": "boolean",
+      "default": false
+    },
+    "requests": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "method",
+              "params"
+            ],
+            "properties": {
+              "method": {
+                "const": "document.list_objects"
+              },
+              "params": {
+                "type": "object",
+                "additionalProperties": false
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "method",
+              "params"
+            ],
+            "properties": {
+              "method": {
+                "const": "object.create_rectangle"
+              },
+              "params": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "x",
+                  "y",
+                  "width",
+                  "height"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "stroke": {
+                    "type": "string",
+                    "pattern": "^(none|#[0-9A-Fa-f]{6})$"
+                  },
+                  "stroke_width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000000
+                  },
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10000000
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10000000
+                  },
+                  "fill": {
+                    "type": "string",
+                    "pattern": "^(none|#[0-9A-Fa-f]{6})$"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "method",
+              "params"
+            ],
+            "properties": {
+              "method": {
+                "const": "object.create_ellipse"
+              },
+              "params": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "x",
+                  "y",
+                  "width",
+                  "height"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "stroke": {
+                    "type": "string",
+                    "pattern": "^(none|#[0-9A-Fa-f]{6})$"
+                  },
+                  "stroke_width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000000
+                  },
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10000000
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10000000
+                  },
+                  "fill": {
+                    "type": "string",
+                    "pattern": "^(none|#[0-9A-Fa-f]{6})$"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "method",
+              "params"
+            ],
+            "properties": {
+              "method": {
+                "const": "object.create_line"
+              },
+              "params": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "x",
+                  "y",
+                  "x2",
+                  "y2"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "stroke": {
+                    "type": "string",
+                    "pattern": "^(none|#[0-9A-Fa-f]{6})$"
+                  },
+                  "stroke_width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000000
+                  },
+                  "x2": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "y2": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "method",
+              "params"
+            ],
+            "properties": {
+              "method": {
+                "const": "object.create_text"
+              },
+              "params": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "x",
+                  "y",
+                  "text",
+                  "font_size"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": -10000000,
+                    "maximum": 10000000
+                  },
+                  "stroke": {
+                    "type": "string",
+                    "pattern": "^(none|#[0-9A-Fa-f]{6})$"
+                  },
+                  "stroke_width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000000
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256,
+                    "pattern": "^[ -~]+$"
+                  },
+                  "font_size": {
+                    "type": "integer",
+                    "minimum": 1000,
+                    "maximum": 1000000
+                  },
+                  "fill": {
+                    "type": "string",
+                    "pattern": "^(none|#[0-9A-Fa-f]{6})$"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$comment": "Validators also check upper bounds, nonzero lines and transaction ordering (optional list, creations, optional list). Creation-time style only; no save/delete/remote operations."
+}

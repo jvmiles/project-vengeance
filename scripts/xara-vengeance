@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Backend choice happens before process startup; the CDraw executable is unchanged.
+set -euo pipefail
+repo_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+renderer=cdraw
+selected=false
+forward=()
+while (($#)); do
+    case "$1" in
+        --) forward+=("$@"); break ;;
+        --renderer=*)
+            if $selected; then echo 'Specify --renderer only once.' >&2; exit 64; fi
+            renderer=${1#--renderer=}; selected=true ;;
+        --renderer)
+            if $selected || (($# < 2)); then echo 'Expected one --renderer value.' >&2; exit 64; fi
+            renderer=$2; selected=true; shift ;;
+        *) forward+=("$1") ;;
+    esac
+    shift
+done
+case "$renderer" in
+    cdraw) executable=${XARA_CDRAW_BINARY:-$repo_dir/build/native/XaraLX} ;;
+    native)
+        echo 'The native renderer is not implemented. No application was started.' >&2
+        echo 'Use --renderer=cdraw (the default) for the working editor.' >&2
+        exit 69 ;;
+    *) echo "Unknown renderer: $renderer. Expected cdraw or native." >&2; exit 64 ;;
+esac
+[[ -x "$executable" ]] || { echo "CDraw executable unavailable: $executable" >&2; exit 69; }
+export XARA_DATA_DIR=${XARA_DATA_DIR:-$repo_dir}
+exec "$executable" "${forward[@]}"

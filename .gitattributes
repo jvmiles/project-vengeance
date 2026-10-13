@@ -1,0 +1,20 @@
+# Distribution-only filtering; original Git history is preserved.
+Designs export-ignore
+TextDesigns export-ignore
+doc/en export-ignore
+docs export-ignore
+research export-ignore
+scripts/build-ai-assistant.sh export-ignore
+scripts/build-assistant-provider.sh export-ignore
+scripts/check-assistant-presets.sh export-ignore
+scripts/codex-xara.py export-ignore
+scripts/debug-png-export.sh export-ignore
+scripts/regression-assistant.sh export-ignore
+scripts/regression-bitmap-tracer.sh export-ignore
+scripts/regression-functional.sh export-ignore
+scripts/regression-png-export.sh export-ignore
+scripts/run-assistant-provider.sh export-ignore
+scripts/smoke-assistant.sh export-ignore
+scripts/test-real-ollama.py export-ignore
+scripts/verify-integrated-host.sh export-ignore
+testfiles export-ignore

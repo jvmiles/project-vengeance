@@ -1,0 +1,14 @@
+# Reference only; do not replace an existing config.toml with this file.
+[mcp_servers.xara_vengeance_test]
+command = "/absolute/path/to/vengeance/build/mcp-venv/bin/python"
+args = ["/absolute/path/to/vengeance/automation/mcp/server.py", "--binary", "/absolute/path/to/vengeance/build/automation-v02/XaraLX"]
+required = true
+startup_timeout_sec = 20
+tool_timeout_sec = 30
+enabled_tools = ["xara_create_scene", "xara_get_capabilities", "xara_get_last_result"]
+default_tools_approval_mode = "prompt"
+
+[mcp_servers.xara_vengeance_test.env]
+DISPLAY = ":0.0"
+XAUTHORITY = "/absolute/path/to/.Xauthority"
+XDG_SESSION_TYPE = "x11"

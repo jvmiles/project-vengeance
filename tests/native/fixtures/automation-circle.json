@@ -1,0 +1,7 @@
+{
+  "requests": [
+    {"method": "document.list_objects", "params": {}},
+    {"method": "object.create_ellipse", "params": {"x": 72000, "y": 72000, "width": 144000, "height": 144000}},
+    {"method": "document.list_objects", "params": {}}
+  ]
+}

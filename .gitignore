@@ -1,0 +1,11 @@
+/build/
+*.o
+*.lo
+*.la
+*.a
+*.so
+*.so.*
+*.core
+core
+core.*
+/autom4te.cache/

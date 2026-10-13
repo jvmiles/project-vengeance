@@ -1,0 +1,11 @@
+{
+  "transaction": true,
+  "requests": [
+    {"method": "document.list_objects", "params": {}},
+    {"method": "object.create_rectangle", "params": {"x": 72000, "y": 180000, "width": 180000, "height": 108000, "fill": "#185ADB", "stroke": "none"}},
+    {"method": "object.create_ellipse", "params": {"x": 288000, "y": 180000, "width": 108000, "height": 108000, "fill": "#D4AF37", "stroke": "none"}},
+    {"method": "object.create_line", "params": {"x": 72000, "y": 144000, "x2": 396000, "y2": 108000, "stroke": "#E53935", "stroke_width": 3000}},
+    {"method": "object.create_text", "params": {"x": 72000, "y": 54000, "text": "PROJECT VENGEANCE", "font_size": 24000, "fill": "#202020", "stroke": "none"}},
+    {"method": "document.list_objects", "params": {}}
+  ]
+}
