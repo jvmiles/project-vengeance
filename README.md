@@ -2,9 +2,35 @@
 
 **Xara Xtreme is back. After 20 years. With a vengeance.**
 
+**Classic Xara vector editing, revived for Linux — now with experimental local AI-assisted drawing.**
+
 Project Vengeance revives Xara Xtreme LX as a native Linux vector graphics editor,
 preserving its original interface, native editable objects and CDraw 4.4 engine.
 The proposed first release is **v0.1.0-beta.1**, a source-only beta.
+
+## AI-assisted vector drawing — powered by local Ollama
+
+The experimental AI Assistant connects to **locally running Ollama**, without
+requiring a cloud AI service. It has been tested with **`qwen2.5-coder:7b`**.
+
+Unlike AI image generators that produce flattened bitmaps, this assistant creates
+**native, editable Xara vector objects** in the current document. You can move,
+recolour, resize and edit the individual objects normally, with **Undo/Redo**.
+
+For example, an illustrative drawing request is:
+
+> Draw a simple house with a red roof, blue windows and a green door.
+
+The Assistant proposes a structured scene. Review the proposal, then click
+**Apply** to explicitly approve document changes. This prompt is illustrative,
+not a verified exact-output guarantee: the current natural-language implementation
+supports a validated subset of drawing operations, principally rectangles and
+ellipses. Unsupported geometry or invalid model output is rejected rather than
+executed. It is an early foundation for AI-assisted vector editing, not a
+general-purpose autonomous design agent.
+
+See [local Ollama setup](release/BUILD.md#experimental-local-ai-assistant) and the
+[optional Ollama testing guide](release/TESTING-CHRIS.md#optional-local-ollama-test).
 
 - [Build and run on Linux](release/BUILD.md)
 - [Release notes and known limitations](release/RELEASE_NOTES.md)
